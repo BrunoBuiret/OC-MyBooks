@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Bruno Buiret" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{% block pageTitle %}MyBooks{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/my-books.css" media="screen" />
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="{{ path('home') }}" class="navbar-brand">MyBooks</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <main>{% block pageContent %}{% endblock %}</main>
+            <footer>
+                <p><strong>MyBooks</strong> est construit avec PHP, Silex, Twig et Bootstrap.</p>
+            </footer>
+        </div>
+
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    </body>
+</html>

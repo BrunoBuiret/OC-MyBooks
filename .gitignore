@@ -1,0 +1,6 @@
+# =======
+# Silex
+# =======
+vendor/
+composer.lock
+composer.phar

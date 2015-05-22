@@ -1,0 +1,14 @@
+{% extends "_layout.html.twig" %}
+
+{% block pageTitle %}{{ parent() }} - Home{% endblock %}
+
+{% block pageContent %}
+    {% for book in books %}
+        <h2><a href="{{ path('book_show', {id: book.id}) }}">{{ book.title }}</a></h2>
+        <p>{{ book.summary }}</p>
+    {% else %}
+        <div class="alert alert-danger">
+            <p>There currently are no books on this site.</p>
+        </div>
+    {% endfor %}
+{% endblock %}

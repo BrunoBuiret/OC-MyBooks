@@ -1,0 +1,12 @@
+{% extends "_layout.html.twig" %}
+
+{% block pageTitle %}{{ parent() }} - Home{% endblock %}
+
+{% block pageContent %}
+    <h1>{{ book.title }}</h1>
+    <ul>
+        <li>Auteur : {{ book.author.firstName ~ " " ~ book.author.lastName }}</li>
+        <li>ISBN : {{ book.isbn }}</li>
+    </ul>
+    <p>{{ book.summary }}</p>
+{% endblock %}
